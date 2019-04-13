@@ -1,0 +1,34 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add question</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <mat-form-field class="question_form--input">
+        <textarea
+          #questionText
+          matInput
+          placeholder="Text *"
+          formControlName="Text"
+          [maxlength]="maxQuestionTextLength"
+        ></textarea>
+
+        <mat-hint align="end"
+          >{{ questionText.value.length }} /
+          {{ maxQuestionTextLength }}</mat-hint
+        >
+        <mat-error>Field is required</mat-error>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="submitForm()"
+      [disabled]="!enableSubmit"
+    >
+      Save
+    </button>
+  </mat-card-actions>
+</mat-card>

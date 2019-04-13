@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+app-add-question {
+  width: 30%;
+}

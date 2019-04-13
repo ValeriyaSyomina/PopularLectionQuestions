@@ -1,0 +1,20 @@
+table {
+  width: 100%;
+}
+
+.question-likes-container {
+  display: flex;
+  align-items: center;
+}
+
+.question-likes-content {
+  margin-right: 0.5rem;
+}
+
+.question-likes-icon {
+  cursor: pointer;
+}
+
+.question-text-column {
+  width: 60%;
+}

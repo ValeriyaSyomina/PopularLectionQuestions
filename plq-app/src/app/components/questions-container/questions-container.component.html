@@ -1,0 +1,7 @@
+<app-add-question (create)="onCreateQuestion($event)"></app-add-question>
+<app-questions-list
+  [questions]="questions$ | async"
+  [loading]="loading$ | async"
+  (like)="onAddLike($event)"
+  (disLike)="onRemoveLike($event)"
+></app-questions-list>
